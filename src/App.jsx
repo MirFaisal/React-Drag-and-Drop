@@ -42,7 +42,7 @@ const App = () => {
 
   return (
     <div className="app">
-      <main className="app_main">
+      <main className="app_main space-x-2">
         <TaskColumn
           title="To do"
           icon={todoIcon}
