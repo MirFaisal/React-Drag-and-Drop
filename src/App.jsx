@@ -12,7 +12,7 @@ const App = () => {
   const [activeCard, setActiveCard] = useState(null);
 
   useEffect(() => {
-    axios.get("http://localhost:3002/tasks").then((res) => {
+    axios.get("https://task-fznu.onrender.com/tasks").then((res) => {
       setTasks(res.data.tasks);
     });
   }, []);
@@ -33,7 +33,7 @@ const App = () => {
 
     const filteredTasks = updatedTasks.map(({ id, ...rest }) => rest);
     console.log(filteredTasks);
-    axios.patch("http://localhost:3002/tasks/position", filteredTasks).then((res) => {
+    axios.patch("https://task-fznu.onrender.com/tasks/position", filteredTasks).then((res) => {
       console.log(res);
     });
     setTasks(updatedTasks);
